@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activate Your Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #4CAF50;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content p {
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+        .activation-code {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 15px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            color: #ffffff;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            text-decoration: none;
+            width: fit-content;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 12px;
+            color: #999;
+        }
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1>Welcome to Our Service!</h1>
+        </div>
+        <div class="content">
+            <p>Hi <%= user.name %>,</p>
+            <p>Thank you for signing up! Please use the activation code below to verify your email address and activate your account:</p>
+            <a href="#" class="activation-code"><%= activationCode %></a>
+            <p>If you didn't sign up for this account, you can safely ignore this email.</p>
+        </div>
+        <div class="footer">
+            <p>&copy; <%= new Date().getFullYear() %> ELearning. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
